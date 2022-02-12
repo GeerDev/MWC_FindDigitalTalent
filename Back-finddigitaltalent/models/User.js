@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema({
     },
     cityOfResidence: {
         type: String,
-        required: [true, 'La ciudad de residencia es obligatorio']
+        required: [true, 'La ciudad de residencia es obligatoria']
     },
     image: String,
     yearsOfExperience: {
