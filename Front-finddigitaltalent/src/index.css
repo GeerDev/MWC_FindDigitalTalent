@@ -1,1 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 
+.navbar-brand {
+    margin-left: 20px;
+}
+
+.navbar-nav {
+    margin-right: 20px;
+}
+
+.cover {
+    background: url("assets/Computer.jpg") center;
+    height: 90vh;
+}
+
+.heightDiv {
+    height: 80vh;
+    color: white;
+    font-family: 'Ubuntu', 'sans-serif';
+}
+  
+  .form {
+    background-color: #212529;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: 700px;
+    padding: 20px;
+    width: 320px;
+  }
+  
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+  }
+  
+  .subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .input-description {
+    height: 100px;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  
+  .submit {
+    background-color: #C70E34;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .submit:hover {
+    background-color: white;
+    color: #C70E34;
+    transition: 1s all;
+  }
+
+  textarea {
+    resize: none;
+  }
