@@ -40,6 +40,9 @@ const UserController = {
       },
       async sendEmail(req, res) {
         try {
+            if (req.body.isDigitalTalent !== 'Barcelona Digital Talent') {
+                return res.status(400).send({ message: 'No puedes enviar el correo' });
+            }
             await transporter.sendMail({
                 to: req.body.email,
                 subject: `Lo conseguiste ${req.body.name}`,
