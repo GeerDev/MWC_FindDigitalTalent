@@ -11,7 +11,7 @@ const UserSchema = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: [true, 'La descripción es obligatorio']
+        required: [true, 'La descripción es obligatoria']
     },
     country: {
         type: String,
@@ -21,7 +21,16 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, 'La ciudad de residencia es obligatorio']
     },
-    image: String
+    image: String,
+    yearsOfExperience: {
+        type: Number,
+        required: [true, 'Los años de experiencia son obligatorios']
+    },
+    sector: {
+        type: String,
+        required: [true, 'El sector es obligatorio']
+    },
+    skills: String
 
 }, { timestamps: true });
 
