@@ -30,7 +30,7 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, 'El sector es obligatorio']
     },
-    skills: String
+    skills: []
 
 }, { timestamps: true });
 
