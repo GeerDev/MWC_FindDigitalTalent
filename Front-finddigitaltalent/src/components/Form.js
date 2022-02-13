@@ -5,6 +5,7 @@ export const Form = () => {
 
     const onSubmit = (e) => {
       e.preventDefault()
+
       const form = {
         name: e.target.firstname.value,
         email: e.target.email.value,
@@ -43,9 +44,8 @@ export const Form = () => {
       <div className="input-description">
         <textarea  className="input" type="text" placeholder="Una breve descripción..." name = "description" />
       </div>
-
-      
-      <button type="submit" className="submit mb-2" onClick={ navegate }>Ya solo falta el último paso</button>
+       
+          <button type="submit" className="submit mb-2" onClick={ navegate }>Ya solo falta el último paso</button>
       
     </form>
     )
