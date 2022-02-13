@@ -56,6 +56,14 @@
     width: 100%;
     margin-top: 20px;
   }
+
+  .input-error {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    color:#C70E34;
+  }
   
   .input {
     background-color: #303245;
@@ -68,6 +76,19 @@
     outline: 0;
     padding: 4px 20px 0;
     width: 100%;
+  }
+
+  .input-select {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+    font-family: sans-serif;
   }
   
   .submit {
@@ -92,4 +113,16 @@
 
   textarea {
     resize: none;
+  }
+
+  .card {
+      width: 250px;
+  }
+
+  .card img {
+      height: 150px;
+  }
+  .card-body {
+      background-color: #212529;
+      text-align: center;
   }
