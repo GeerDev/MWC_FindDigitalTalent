@@ -6,10 +6,10 @@ export const Form = () => {
     const onSubmit = (e) => {
       e.preventDefault()
       const form = {
-        firstname: e.target.firstname.value,
+        name: e.target.firstname.value,
         email: e.target.email.value,
         country: e.target.country.value,
-        city: e.target.city.value,
+        cityOfResidence: e.target.city.value,
         description: e.target.description.value
       }
       localStorage.setItem("myobject", JSON.stringify(form))
@@ -24,13 +24,15 @@ export const Form = () => {
 
     return (
       <form onSubmit = { onSubmit } className="form animate__animated animate__fadeInLeft d-flex flex-column align-items-center justify-content-center" >
+
       <div className="title mt-2">Bienvenid@</div>
       <div className="subtitle text-center">Por favor rellena estos datos personales</div>
+
       <div className="input-container">
         <input className="input" type="text" placeholder="Nombre completo" name = "firstname" />
       </div>
       <div className="input-container">
-        <input className="input" type="email" placeholder="Correo electrónico" name = "email"  />
+        <input className="input" type="text" placeholder="Correo electrónico" name = "email"  />
       </div>
       <div className="input-container">
         <input className="input" type="text" placeholder="Pais" name = "country"  />
