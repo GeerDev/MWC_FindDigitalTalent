@@ -24,7 +24,7 @@ export const Form = () => {
     }
 
     return (
-      <form onSubmit = { onSubmit } className="form animate__animated animate__fadeInLeft d-flex flex-column align-items-center justify-content-center" >
+      <form onSubmit = { onSubmit } className="form animate__animated animate__fadeInLeft d-flex flex-column align-items-center justify-content-center mt-5" >
 
       <div className="title mt-2">Bienvenid@</div>
       <div className="subtitle text-center">Por favor rellena estos datos personales</div>
