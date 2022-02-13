@@ -13,40 +13,76 @@ export const UserDetail = () => {
     const result = user.find(u => u.id === Id)
     setcurrentUser(result)
   }), [Id])
-  
+
   const handleReturn = () => {
     navigate( -1 );
   }
 
-  console.log(currentUser);
+  const { name, image, email, country, cityOfResidence, sector, yearsOfExperience, skills } = currentUser
+
+  const sendEmail = () => {
+    const isAdmin = document.getElementById('isDigitalTalent').value
+      const bodyEmail = {
+        email,
+        name,
+        isDigitalTalent: isAdmin
+      }
+    console.log(bodyEmail);
+  }
 
     return (
-      <div className="row mt-5">
+      <div className="row size">
       <div className="col-4">
           <img 
-              src= "Patata"
-              alt= "Patata"
+              src= {image}
+              alt= {name}
               className="img-thumbnail animate__animated animate__fadeInLeft"
           />
       </div>
 
-      <div className="col-8 animate__animated animate__fadeIn color">
-          <h3>"Patata"</h3>
+      <div className="col-8 animate__animated animate__fadeIn color p-3">
+          <h3>{name}</h3>
           <ul className="list-group list-group-flush">
-              <li className="list-group-item color2"> <b>Alter ego:</b> "Patata" </li>
-              <li className="list-group-item color2"> <b>Publisher:</b> "Patata" </li>
-              <li className="list-group-item color2"> <b>First Appearance:</b> "Patata" </li>
+              <li className="list-group-item color2"> <b>Email:</b> {email} </li>
+              <li className="list-group-item color2"> <b>Pais:</b> {country} </li>
+              <li className="list-group-item color2"> <b>Ciudad de residencia:</b> {cityOfResidence} </li>
+              <li className="list-group-item color2"> <b>Sector especializad@:</b> {sector} </li>
+              <li className="list-group-item color2"> <b>Años de experiencia:</b> {yearsOfExperience} </li>
           </ul>
 
-          <h5 className="mt-3">Characters</h5>
-          <p>"Patata"</p>
+          <h5 className="mt-3">Habilidades</h5>
+          {
+            skills ? (
+              <div className='d-flex align-items-start flex-wrap heightstandartdetail '>
+              {skills.map((elem,idx) => (
+              <div className='animate__animated animate__zoomIn '>
+                <p className="tag-box" key={idx}>#{elem}</p>
+              </div>
+              ))}
+            </div>
+            ) : (
+              <p>Obteniendo datos sobre las skills...</p>
+            )
+          }
 
+          <div className='d-flex flex-column gap-3'>
+          <span>Para poder enviar un correo necesitas la contraseña de administrador, por favor introducela:</span>
+          <input type="text" id="isDigitalTalent" />
+          <div className='d-flex gap-3'>
           <button
               className="btn btn-outline-danger"
               onClick={ handleReturn }
           >
               Regresar 
           </button>
+          <button
+              className="btn btn-outline-danger"
+              onClick={ sendEmail }
+          >
+              Contacta!
+          </button>
+          </div>
+          </div>
 
       </div>
 

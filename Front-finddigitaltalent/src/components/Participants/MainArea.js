@@ -13,6 +13,8 @@ export const MainArea = () => {
         })
 }, [])
 
+console.log(state);
+
     return (
       <>
                 {

@@ -134,6 +134,7 @@
 
   .color2 {
     background-color: #303245;
+    color: white;
   }
 
   .input-hability {
@@ -173,3 +174,27 @@
     height: 300px;
     align-content: flex-start;
   }
+
+  .heightstandartdetail {
+    height: 50px;
+    margin-bottom: 20px;
+    align-content: flex-start;
+  }
+
+  #isDigitalTalent {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    padding: 4px 20px 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    outline: 0;
+    width: 40%;
+  }
+
+  .size {
+    height: 500px;
+    width: 100%;
+  }
+

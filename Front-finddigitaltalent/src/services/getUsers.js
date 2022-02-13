@@ -9,7 +9,8 @@ export const getUsers = async( ) => {
             id: user._id,
             name: user.name,
             description: user.description,
-            image: user.image
+            image: user.image,
+            ...user
         }
     })
 
