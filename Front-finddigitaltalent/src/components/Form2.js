@@ -4,8 +4,8 @@ export const Form2 = () => {
       <div className="form animate__animated animate__fadeInRight d-flex flex-column align-items-center justify-content-center">
       <div className="subtitle text-center">Los últimos detalles</div>
       <div className="input-container">
-      <select name="cars" id="cars" className="input-select">
-      <option disabled selected>Selecciona sector</option>
+      <select name="cars" id="cars" className="input-select" defaultValue={'DEFAULT'}>
+      <option value="DEFAULT" disabled>Selecciona sector</option>
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
             <option value="opel">Opel</option>

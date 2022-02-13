@@ -1,31 +1,51 @@
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 export const Form = () => {
+
+  const navigate = useNavigate()
+
+    const onSubmit = (e) => {
+      e.preventDefault()
+      const form = {
+        firstname: e.target.firstname.value,
+        email: e.target.email.value,
+        country: e.target.country.value,
+        city: e.target.city.value,
+        description: e.target.description.value
+      }
+      localStorage.setItem("myobject", JSON.stringify(form))
+    }
+
+    const navegate = () => {
+      setTimeout( () =>{
+        navigate('/Registro2')
+      }, 0 )
+
+    }
+
     return (
-      <div className="form animate__animated animate__fadeInLeft d-flex flex-column align-items-center justify-content-center">
+      <form onSubmit = { onSubmit } className="form animate__animated animate__fadeInLeft d-flex flex-column align-items-center justify-content-center" >
       <div className="title mt-2">Bienvenid@</div>
       <div className="subtitle text-center">Por favor rellena estos datos personales</div>
       <div className="input-container">
-        <input id="firstname" className="input" type="text" placeholder="Nombre completo" />
+        <input className="input" type="text" placeholder="Nombre completo" name = "firstname" />
       </div>
       <div className="input-container">
-        <input id="lastname" className="input" type="text" placeholder="Correo electrónico" />
+        <input className="input" type="email" placeholder="Correo electrónico" name = "email"  />
       </div>
       <div className="input-container">
-        <input id="email" className="input" type="text" placeholder="Pais" />
+        <input className="input" type="text" placeholder="Pais" name = "country"  />
       </div>
       <div className="input-container">
-        <input id="email" className="input" type="text" placeholder="Ciudad de residencia" />
+        <input className="input" type="text" placeholder="Ciudad de residencia" name = "city"  />
       </div>
       <div className="input-description">
-        <textarea id="email" className="input" type="text" placeholder="Una breve descripción..."/>
+        <textarea  className="input" type="text" placeholder="Una breve descripción..." name = "description" />
       </div>
-      {/* <div className="input-error">
-        Hola
-      </div> */}
-      <Link to="/Registro2">
-      <button type="text" className="submit mb-2">Ya solo falta el último paso</button>
-      </Link>
-    </div>
+
+      
+      <button type="submit" className="submit mb-2" onClick={ navegate }>Ya solo falta el último paso</button>
+      
+    </form>
     )
   }
   

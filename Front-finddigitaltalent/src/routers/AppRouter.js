@@ -21,7 +21,7 @@ export const AppRouter = () => {
                     <Route path="Registro2" element={<Form2 />} />
                     <Route path="Feedback" element={<Feedback />} />
                     <Route path="Participantes" element={<MainArea />} />
-                    <Route path="Participante/:ParticipanteId" element={<UserDetail />} />
+                    <Route path="Participante/:Id" element={<UserDetail />} />
 
                     <Route path="/" element={<Welcome />} />
                 </Routes>

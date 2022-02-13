@@ -11,7 +11,7 @@ export const MainArea = () => {
         .then( users => {            
             setState(users)
         })
-}, [state])
+}, [])
 
     return (
       <>
