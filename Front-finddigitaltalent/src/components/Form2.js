@@ -13,6 +13,7 @@ export const Form2 = () => {
     const addArray= () => {
       const ref = document.getElementById('skills')
       setArray([...array, ref.value])
+      ref.value = ''
     }
 
     const onSubmit = (e) => {
