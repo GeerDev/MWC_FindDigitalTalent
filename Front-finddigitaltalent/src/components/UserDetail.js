@@ -1,10 +1,12 @@
 import { getUsers } from '../services/getUsers'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useState, useMemo } from 'react';
+import { sendEmail } from '../services/sendEmail'
 
 export const UserDetail = () => {
 
   const [currentUser, setcurrentUser] = useState({})
+  const [error, setError] = useState([])
 
   const { Id } = useParams();
   const navigate = useNavigate()
@@ -20,14 +22,19 @@ export const UserDetail = () => {
 
   const { name, image, email, country, cityOfResidence, sector, yearsOfExperience, skills } = currentUser
 
-  const sendEmail = () => {
+  const sendData = () => {
     const isAdmin = document.getElementById('isDigitalTalent').value
       const bodyEmail = {
-        email,
-        name,
+        email: email,
+        name: name,
         isDigitalTalent: isAdmin
       }
-    console.log(bodyEmail);
+    sendEmail(bodyEmail).then(err => {
+      console.log(err);
+      setError([err.message])
+      
+    })
+    
   }
 
     return (
@@ -77,7 +84,7 @@ export const UserDetail = () => {
           </button>
           <button
               className="btn btn-outline-danger"
-              onClick={ sendEmail }
+              onClick={ sendData }
           >
               Contacta!
           </button>
