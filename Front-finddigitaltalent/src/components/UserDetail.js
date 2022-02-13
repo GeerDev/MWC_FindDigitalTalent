@@ -30,9 +30,7 @@ export const UserDetail = () => {
         isDigitalTalent: isAdmin
       }
     sendEmail(bodyEmail).then(err => {
-      console.log(err);
-      setError([err.message])
-      
+      setError([err.message])   
     })
     
   }
@@ -74,7 +72,10 @@ export const UserDetail = () => {
 
           <div className='d-flex flex-column gap-3'>
           <span>Para poder enviar un correo necesitas la contraseña de administrador, por favor introducela:</span>
-          <input type="text" id="isDigitalTalent" />
+          <div className='d-flex gap-3 align-items-baseline'>
+              <input type="text" id="isDigitalTalent" />
+              <p className='animate__animated animate__flash'>{error}</p>
+          </div>
           <div className='d-flex gap-3'>
           <button
               className="btn btn-outline-danger"
