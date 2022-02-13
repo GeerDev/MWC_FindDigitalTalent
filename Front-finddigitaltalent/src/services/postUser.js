@@ -1,6 +1,6 @@
 export const postUser = async( data ) => {
 
-    const url = `http://localhost:4000/users`;
+    const url = `https://mwc-finddigitaltalent.herokuapp.com/users`;
     await fetch(url, {
         method: 'POST', 
         body: JSON.stringify(data), 

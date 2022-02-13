@@ -1,6 +1,6 @@
 export const getUsers = async( ) => {
 
-    const url = `http://localhost:4000/users`;
+    const url = `https://mwc-finddigitaltalent.herokuapp.com/users`;
     const resp = await fetch( url );
     const data = await resp.json();
 

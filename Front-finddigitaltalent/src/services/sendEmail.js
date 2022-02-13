@@ -1,6 +1,6 @@
 export const sendEmail= async( data ) => {
 
-    const url = `http://localhost:4000/users/sendEmail`;
+    const url = `https://mwc-finddigitaltalent.herokuapp.com/sendEmail`;
     const resp = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(data), 
