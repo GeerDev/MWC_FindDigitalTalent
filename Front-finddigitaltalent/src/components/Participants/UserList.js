@@ -1,8 +1,14 @@
-const UserList = () => {
+export const UserList = ({ id, name, description, image}) => {
     return (
-      <div>UserList</div>
+      <div className="card animate__animated animate__jackInTheBox">
+      <img src={ image } alt="Logo MObile World Capital" width={250}/>
+      <div className="card-body">
+        <h5 className="card-title">{ name }</h5>
+        <p className="card-text">{ description }</p>
+        <button className="btn btn-danger">Ir al perfil de { name }</button>
+      </div>
+    </div>  
     )
   }
   
-  export default UserList;
   

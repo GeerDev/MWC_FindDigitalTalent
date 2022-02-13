@@ -21,21 +21,16 @@ const UserController = {
             res.status(500).send({ error, message: 'Hubo un problema al tratar de registrar el usuario' })
         }
     },
-    async getUserSector(req, res) {
+    async getUser(req, res) {
         try {
-          const user = await User.aggregate([
-            {
-              $match: {
-                sector: req.params.sector,
-              },
-            },
-          ]);
-          res.status(200).send({user, message: `Usuarios del sector ${req.params.sector} traidos con éxito`});
+          const user = await User.find()
+       
+          res.status(200).send({user, message: `Usuarios traidos con éxito`});
         } catch (error) {
           console.error(error);
           res
             .status(500)
-            .send({ message: "Ha habido un problema al traer el usuario" });
+            .send({ message: "Ha habido un problema al traer los usuarios" });
         }
       },
       async sendEmail(req, res) {

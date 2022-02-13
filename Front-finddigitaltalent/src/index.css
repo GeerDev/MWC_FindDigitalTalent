@@ -123,6 +123,7 @@
       height: 150px;
   }
   .card-body {
+      height: 200px;
       background-color: #212529;
       text-align: center;
   }
