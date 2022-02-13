@@ -56,6 +56,8 @@ Nuestra aplicación se encuentra desplegada en Heroku en este enlace:
 
 https://frontreactmwc.herokuapp.com/
 
+(Si tarda, esperar unos segundos que Heroku despierte)
+
 ## Un breve demo de nuestra app en funcionamiento
 
 El siguiente enlace se puede ver el funcionamiento de nuestra aplicación:
@@ -79,7 +81,7 @@ El proyecto ha sido desarrollado utilizando las siguientes paquetes en Nodejs:
 
 Se que me han quedado cosas muy importantes por cubrir, como la validación del formulario o un diseño responsive, pero pese a esto, estoy contento con el resultado de haber sacado algo que funcione en 2 días y además siendo mi primer proyecto propio hecho con React. Con más tiempo implementare estas cosas para que quede algo aun mejor para el futuro.
 
-Dar las gracias a la organización por eventos y retos como este, mucha gente junior o pre-junior nos motiva hacer este tipo de proyectos y sin sacar un producto muy acabado he aprendido un montón de fallos y cosas que mejorar.
+Dar las gracias a la organización por eventos y retos como este, mucha gente junior o pre-junior nos motiva hacer este tipo de proyectos y sin sacar un producto muy acabado he aprendido de un montón de fallos y cosas que mejorar.
 
 ---
 Hecho por [Germán Fernández](https://github.com/GeerDev) 😊 
