@@ -4,6 +4,8 @@ _Aplicación de registro para participar en el evento de Hackathon presencial Mo
 
 _La aplicación permite registrarse y formar parte del grupo de personas que se presentan al Hackathon mediante el uso de nuestra aplicación, además puedes hacer al perfil del usuario registrado y si formas parte del departamento de Digital Talent Barcelona puedes enviarle directamente un correo_
 
+![foto](./images_github/PortadaHackathon.png) 
+
 ## ¿Como desplegar el proyecto? 📋
 
 Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo:
@@ -55,6 +57,8 @@ https://mwc-finddigitaltalent.herokuapp.com/
 Nuestra aplicación se encuentra desplegada en Heroku en este enlace:
 
 https://frontreactmwc.herokuapp.com/
+
+![foto](./images_github/PerfilUser.png) 
 
 (Si tarda, esperar unos segundos que Heroku despierte)
 
